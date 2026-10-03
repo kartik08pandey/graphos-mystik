@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+    --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Background paper grain & lighting */
+.bg-dark-paper {
+  background-color: #121214;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 175, 55, 0.04) 0%, transparent 70%),
+    radial-gradient(circle at 50% 60%, rgba(255, 255, 255, 0.015) 0%, transparent 100%),
+    linear-gradient(180deg, #131316 0%, #0d0d0f 100%);
+}
+
+.bg-light-paper {
+  background-color: #f8f6f0;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 50% 60%, rgba(0, 0, 0, 0.015) 0%, transparent 100%),
+    linear-gradient(180deg, #faf8f3 0%, #f4f0e6 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c44;
+}
+
+/* Glow effects */
+.gold-glow {
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.15));
+}
+
+.card-dark-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+.card-light-glass {
+  background: #ffffff;
+  border: 1px solid #e7e2d7;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
